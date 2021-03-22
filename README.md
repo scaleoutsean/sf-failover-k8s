@@ -11,7 +11,8 @@ To do that it does the following:
 5) Change volume access mode from `failoverTarget` to `readWrite` for all these volumes
 6) Update IQN and Target Portal for these PV and replaces PVs in Kubernetes
 
-**NOTE:**: This script **has not been tested** and it may not really work (in fact I am sure I can't make it work as-is). I would **not recommend** testing it out outside of a lab environment.
+**NOTE:** this script **has not been tested** and it may not really work (in fact I am sure I can't make it work as-is). I would **not recommend** testing it out outside of a lab environment.
+
 ## Prerequisites
 
 - All primary SolidFire Volumes (corresponiding to PVs in K8S) have a replicated volume on the secondary SolidFire with exactly the same name
@@ -73,5 +74,6 @@ LOG_LEVEL="debug"
 - This script may requires the use of VAGs which latest Trident no longer recommends
   - Trident's SolidFire backend should be configured to use VAGs
   - If that is the case user must maintain VAGs if Trident's SolidFire backend does not use CHAP (please check the Trident documentation for VAG-related limitations)
+- After switch-over, Trident backend configuration for SolidFire may need updating (in the case the new cluster has different cluster admin username or password, for example)
 
 To make this script usable, we'd have to update it and test it with a Trident release v21.01 or better. Please submit results of your testing in Issues.
