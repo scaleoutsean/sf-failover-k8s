@@ -1,10 +1,10 @@
-KUBECONFIG="/root/.kube/config"
+KUBECONFIG="/scaleoutsean/.kube/config"
 SF_USERNAME="admin"
-SF_PASSWORD="secret01"
-SF_IP="10.10.10.10"
-SF_TARGET_PORTAL="192.168.0.10:3260"
-NO_EXECUTE="True"
-LOG_LEVEL="info"
+SF_PASSWORD="admin"
+SF_IP="192.168.1.30"
+SF_TARGET_PORTAL="192.168.103.30:3260"
+NO_EXECUTE="true"
+LOG_LEVEL="debug"
 WAIT_TIME=5
 
 export KUBECONFIG

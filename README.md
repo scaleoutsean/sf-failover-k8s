@@ -2,7 +2,7 @@
 
 It aims to provide a simple method to failover a Kubernetes cluster from one SolidFire cluster to another by redirecting iSCSI to a backup SolidFire cluster.
 
-To do that it does the following:
+To accomplish that, it does the following:
 
 1) Go through all the PVs in a Kubernetes cluster
 2) Find only iSCSI vols
@@ -11,7 +11,7 @@ To do that it does the following:
 5) Change volume access mode from `failoverTarget` to `readWrite` for all these volumes
 6) Update IQN and Target Portal for these PV and replaces PVs in Kubernetes
 
-**NOTE:** this script **has not been tested** and it may not really work (in fact I am sure I can't make it work as-is). I would **not recommend** testing it out outside of a lab environment.
+**NOTE:** this script **has not been tested** and it may not really work (in fact I am sure I can't make it work as-is). I would **not recommend** testing it out outside of a lab environment. See Limitations and the issues before you give it a try.
 
 ## Prerequisites
 
@@ -69,11 +69,13 @@ LOG_LEVEL="debug"
 
 ## Limitations
 
+- Logging does **not** mask SolidFire cluster credentials (see Issues)
 - The script is limited to exactly what it says it does in a simple "one Kubernetes, two SolidFire clusters" environment
 - This script not designed to work in complex environments (for example, Kubernetes cluster connected to three SolidFire arrays)
 - This script may requires the use of VAGs which latest Trident no longer recommends
   - Trident's SolidFire backend should be configured to use VAGs
   - If that is the case user must maintain VAGs if Trident's SolidFire backend does not use CHAP (please check the Trident documentation for VAG-related limitations)
 - After switch-over, Trident backend configuration for SolidFire may need updating (in the case the new cluster has different cluster admin username or password, for example)
+  - I'm not sure how Trident is supposed to create new PVs after failover - this should be checked
 
 To make this script usable, we'd have to update it and test it with a Trident release v21.01 or better. Please submit results of your testing in Issues.

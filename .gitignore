@@ -1,5 +1,9 @@
+
 #local virtualenv
 venv
+
+#local profile
+profile
 
 #mac
 .DS_Store
