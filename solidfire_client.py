@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
-Author: Kapil Arora
-Github: @kapilarora
+Author: Kapil Arora, scaleoutsean
+Github: @kapilarora, @scaleoutSean
 """
 from solidfire.factory import ElementFactory
 
@@ -17,10 +17,10 @@ class SFClient(object):
 
     def create_sf_client(self):
 
-        return ElementFactory.create(self._ip, self._username, self._password)
+        return ElementFactory.create(self._ip, self._username, self._password, 11.0, print_ascii_art=False)
 
     def get_accounts(self):
-        print 'getting accounts'
+        print ('getting accounts')
         return self._client.list_accounts()
 
     def get_volume(self, vol_name):

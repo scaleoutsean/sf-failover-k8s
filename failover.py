@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
-Author: Kapil Arora
-Github: @kapilarora
+Author: Kapil Arora, scaleoutsean
+Github: @kapilarora, @scaleoutsean
 """
 from solidfire_client import SFClient
 from k8s_client import K8SClient

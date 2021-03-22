@@ -1,19 +1,27 @@
-cachetools==2.0.1
-certifi==2017.7.27.1
-chardet==3.0.4
-enum34==1.1.6
-future==0.16.0
-google-auth==1.1.1
-idna==2.6
-ipaddress==1.0.18
-kubernetes==3.0.0
-pyasn1==0.3.7
-pyasn1-modules==0.1.5
-python-dateutil==2.6.1
-PyYAML==3.12
-requests==2.18.4
-rsa==3.4.2
-six==1.11.0
-solidfire-sdk-python==1.4.0.271
-urllib3==1.22
-websocket-client==0.40.0
+certifi>=14.05.14 # MPL
+six>=1.9.0  # MIT
+python-dateutil>=2.5.3  # BSD
+setuptools>=21.0.0  # PSF/ZPL
+pyyaml>=3.12  # MIT
+google-auth>=1.0.1  # Apache-2.0
+ipaddress>=1.0.17;python_version=="2.7"  # PSF
+websocket-client>=0.32.0,!=0.40.0,!=0.41.*,!=0.42.* # LGPLv2+
+requests # Apache-2.0
+requests-oauthlib # ISC
+urllib3>=1.24.2  # MIT
+kubernetes>=17.14.0a1
+# cachetools==2.0.1
+# chardet==3.0.4
+# enum34==1.1.6
+# future==0.16.0
+# google-auth==1.1.1
+# idna==2.6
+# ipaddress==1.0.18
+# kubernetes==3.0.0
+# pyasn1==0.3.7
+# pyasn1-modules==0.1.5
+# python-dateutil==2.6.1
+# PyYAML==3.12
+# requests==2.18.4
+# rsa==3.4.2
+solidfire-sdk-python==1.7.0.152
