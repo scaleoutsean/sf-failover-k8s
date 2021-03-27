@@ -1,3 +1,5 @@
+**NOTE:** This script is meant for pre-CSI Kubernetes. If you use a Trident CSI, move on - nothing to see here!
+
 ## What does sf-failover-k8s do?
 
 It aims to provide a simple method to failover a Kubernetes cluster from one SolidFire cluster to another by redirecting iSCSI to a backup SolidFire cluster.
